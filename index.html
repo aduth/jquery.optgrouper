@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Optgrouper Demo</title>
+
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/docs.css">
+</head>
+<body onload="prettyPrint()">
+
+<h1 class="headline">jQuery Optgrouper Demo</h1>
+
+<div class="example clearfix">
+    <div class="label">
+        <h2>Usage</h2>
+    </div>
+    <div class="body">
+        <p>Add data-optgroup attribute to each &lt;option&gt; element.</p>
+        <pre class="prettyprint">
+&lt;select id="selAnimals"&gt;
+    &lt;option data-optgroup="Mammals"&gt;Cheetah&lt;/option&gt;
+    &lt;option data-optgroup="Reptiles"&gt;Lizard&lt;/option&gt;
+    &lt;option data-optgroup="Reptiles"&gt;Snake&lt;/option&gt;
+    &lt;option data-optgroup="Mammals"&gt;Elephant&lt;/option&gt;
+&lt;/select&gt;</pre>
+        <p>Include jquery.js and jquery.optgrouper.js, then call Optgrouper when page is ready.</p>
+        <pre class="prettyprint">
+&lt;script src="jquery.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.optgrouper.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+    $('#selAnimals').optgrouper();
+});
+&lt;/script&gt;</pre>
+    </div>
+</div>
+
+<div class="example clearfix">
+    <div class="label">
+        <h2>Demo</h2>
+    </div>
+    <div class="body">
+        <p>The &lt;select&gt; list below has been modified using the jQuery Optgrouper plugin.</p>
+        <select id="selAnimals">
+            <option data-optgroup="Mammals">Cheetah</option>
+            <option data-optgroup="Reptiles">Lizard</option>
+            <option data-optgroup="Reptiles">Snake</option>
+            <option data-optgroup="Mammals">Elephant</option>
+        </select>
+    </div>
+</div>
+
+<p class="github-info">
+    Copyright &copy; 2012 Andrew Duthie<br>
+    For project and license information, visit the <a href="https://github.com/aduth/uTip/">GitHub repository</a>
+</p>
+
+<script src="js/prettify.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.optgrouper.js"></script>
+<script>
+$(document).ready(function() {
+    $('#selAnimals').optgrouper();
+});
+</script>
+</body>
+</html>
