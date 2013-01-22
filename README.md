@@ -4,7 +4,7 @@ Optgrouper is a jQuery plugin which makes it easy to group related `<option>` el
 
 [Demonstration](http://aduth.github.com/jquery.optgrouper/)
 
-### Usage
+## Usage
 
 Add `data-optgroup` attribute to each `<option>` element.
 
@@ -27,6 +27,25 @@ $(document).ready(function() {
     $('#selAnimals').optgrouper();
 });
 </script>
+```
+
+## Options
+
+There are currently two options to control the behavior of Optgrouper.
+
+* `sortGroups` (Function) - Given an array of group names, return the same array in a custom sort order
+* `renderImmediately` (Boolean) - Control whether groups are rendered immediately upon plugin call (defaults to true)
+
+_Example_
+
+```javascript
+$('#selAnimals').optgrouper({
+    sortGroups: function(groups) {
+        return groups.sort();
+    },
+    renderImmediately: false
+}).data('plugin_optgrouper').renderGroups();
+
 ```
 
 ## License
