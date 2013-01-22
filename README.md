@@ -28,3 +28,9 @@ $(document).ready(function() {
 });
 </script>
 ```
+
+## License
+
+Copyright (c) 2013 Andrew Duthie
+
+Released under the MIT License (see LICENSE.txt)
