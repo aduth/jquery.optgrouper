@@ -2,7 +2,7 @@
 
 Optgrouper is a jQuery plugin which makes it easy to group related `<option>` elements into `<optgroup>` groupings using a custom `data-optgroup` attribute.
 
-[Demonstration](https://aduth.github.com/jquery.optgrouper)
+[Demonstration](http://aduth.github.com/jquery.optgrouper/)
 
 ### Usage
 
