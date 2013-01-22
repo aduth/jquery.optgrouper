@@ -24,7 +24,7 @@ Include jquery.js and jquery.optgrouper.js, then call Optgrouper when page is re
 <script src="jquery.optgrouper.js"></script>
 <script>
 $(document).ready(function() {
-    $('#selAnimals').optrouper();
+    $('#selAnimals').optgrouper();
 });
 </script>
 ```
