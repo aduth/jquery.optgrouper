@@ -1,0 +1,18 @@
+{
+  "name": "jquery.optgrouper",
+  "version": "0.1.0",
+  "description": "Automatically group <option>'s into <optgroup>'s using data-optgroup attribute",
+  "author": "Andrew Duthie <andrew@andrewduthie.com>",
+  "license": "MIT",
+  "keywords": [
+    "optgroup",
+    "select",
+    "dropdown"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-mocha": "~0.2.1",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-concat": "~0.1.2"
+  }
+}
