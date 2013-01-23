@@ -27,14 +27,34 @@ module.exports = function(grunt) {
             options: {
                 run: true
             }
+        },
+        jquerymanifest: {
+            options: {
+                source: 'package.json',
+                overrides: {
+                    name: "optgrouper",
+                    title: "jquery.optgrouper",
+                    author: {
+                        name: "Andrew Duthie",
+                        email: "andrew@andrewduthie.com",
+                        url: "http://www.andrewduthie.com"
+                    },
+                    homepage: "http://aduth.github.com/jquery.optgrouper",
+                    demo: "http://aduth.github.com/jquery.optgrouper",
+                    dependencies: {
+                        jquery: ">=1.2.3"
+                    }
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-mocha');
+    grunt.loadNpmTasks('grunt-jquerymanifest')
 
     grunt.registerTask('test', ['mocha']);
-    grunt.registerTask('compile', ['test', 'concat', 'uglify']);
+    grunt.registerTask('compile', ['test', 'concat', 'uglify', 'jquerymanifest']);
 
 };
