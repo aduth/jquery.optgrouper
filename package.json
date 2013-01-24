@@ -14,6 +14,6 @@
     "grunt-mocha": "~0.2.1",
     "grunt-contrib-uglify": "~0.1.1",
     "grunt-contrib-concat": "~0.1.2",
-    "grunt-jquerymanifest": "0.1.0"
+    "grunt-jquerymanifest": "0.1.2"
   }
 }
