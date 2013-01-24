@@ -9,13 +9,18 @@
   },
   "licenses": [
     {
-      "name": "MIT"
+      "type": "MIT"
     }
   ],
   "dependencies": {
     "jquery": ">=1.2.3"
   },
   "description": "Automatically group <option>'s into <optgroup>'s using data-optgroup attribute",
+  "keywords": [
+    "optgroup",
+    "select",
+    "dropdown"
+  ],
   "homepage": "http://aduth.github.com/jquery.optgrouper",
   "demo": "http://aduth.github.com/jquery.optgrouper"
 }
