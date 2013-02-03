@@ -26,7 +26,7 @@ describe('optgrouper', function() {
                     renderImmediately: false
                 }).data('plugin_optgrouper');
 
-            expect(plugin.getGroups().length).to.be(numGroups);
+            expect(Object.keys(plugin.getGroups()).length).to.be(numGroups);
         });
     });
 

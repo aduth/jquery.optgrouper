@@ -26,16 +26,18 @@
 
     Optgrouper.prototype.getGroups = function() {
         if (typeof this.groups === 'undefined') {
-            var groups = [];
+            var $options = this.getOptions(),
+                groups = [];
 
-            this.getOptions().each(function() {
-                var $o = $(this),
-                    groupName = $o.data('optgroup');
+            for (var o = 0, ol = $options.length; o < ol; o++) {
+                var groupName = $options[o].getAttribute('data-optgroup');
 
-                if ($.inArray(groupName, groups) < 0) {
-                    groups.push(groupName);
+                if (!(groupName in groups)) {
+                    groups[groupName] = [];
                 }
-            });
+
+                groups[groupName].push($options[o]);
+            }
 
             this.groups = groups;
         }
@@ -43,21 +45,43 @@
         return this.groups;
     };
 
-    Optgrouper.prototype.renderGroups = function() {
-        var $options = this.getOptions(),
-            groups = this.options.sortGroups(this.getGroups()),
-            rendered = [];
+    Optgrouper.prototype.getSortedGroupLabels = function() {
+        if (typeof this.sortedGroupLabels === 'undefined') {
+            var sorter = [],
+                groups = this.getGroups();
 
-        for (var i = 0, gl = groups.length; i < gl; i++) {
-            var groupName = groups[i],
-                $groupEl = $('<optgroup label="' + groupName + '"/>');
+            for (var groupName in groups) {
+                if (groups.hasOwnProperty(groupName)) {
+                    sorter.push(groupName);
+                }
+            }
 
-            $options.filter('option[data-optgroup="' + groupName + '"]').appendTo($groupEl);
-
-            rendered.push($groupEl);
+            this.sortedGroupLabels = this.options.sortGroups(sorter);
         }
 
-        this.$el.html(rendered);
+        return this.sortedGroupLabels;
+    };
+
+    Optgrouper.prototype.renderGroups = function() {
+        var groups = this.getGroups(),
+            labels = this.getSortedGroupLabels(),
+            rendered = [];
+
+        for (var l = 0, ll = labels.length; l < ll; l++) {
+            var groupName = labels[l],
+                optgroupEl = document.createElement('optgroup'),
+                groupOptions = groups[groupName];
+
+            optgroupEl.label = groupName;
+
+            for (var o = 0, ol = groupOptions.length; o < ol; o++) {
+                optgroupEl.appendChild(groupOptions[o]);
+            }
+
+            rendered.push(optgroupEl.outerHTML);
+        }
+
+        this.$el.html(rendered.join());
     };
 
     window.Optgrouper = Optgrouper;
