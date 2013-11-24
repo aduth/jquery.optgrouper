@@ -32,7 +32,6 @@ module.exports = function(grunt) {
             options: {
                 source: 'package.json',
                 overrides: {
-                    name: "optgrouper",
                     title: "jquery.optgrouper",
                     author: {
                         name: "Andrew Duthie",

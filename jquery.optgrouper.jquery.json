@@ -1,6 +1,6 @@
 {
-  "name": "optgrouper",
-  "version": "0.1.1",
+  "name": "jquery.optgrouper",
+  "version": "0.2.0",
   "title": "jquery.optgrouper",
   "author": {
     "name": "Andrew Duthie",
@@ -16,12 +16,12 @@
   "dependencies": {
     "jquery": ">=1.2.3"
   },
+  "homepage": "http://aduth.github.com/jquery.optgrouper",
   "description": "Automatically group <option>'s into <optgroup>'s using data-optgroup attribute",
   "keywords": [
     "optgroup",
     "select",
     "dropdown"
   ],
-  "homepage": "http://aduth.github.com/jquery.optgrouper",
   "demo": "http://aduth.github.com/jquery.optgrouper"
 }
