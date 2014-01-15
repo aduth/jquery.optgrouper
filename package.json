@@ -9,6 +9,9 @@
     "select",
     "dropdown"
   ],
+  "scripts": {
+    "test": "node -e \"require('grunt').tasks('test');\""
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-mocha": "~0.4.6",
