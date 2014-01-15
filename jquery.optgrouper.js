@@ -1,4 +1,4 @@
-/*! jquery.optgrouper 0.2.0 | (c) 2013 Andrew Duthie <andrew@andrewduthie.com> | MIT License */
+/*! jquery.optgrouper 0.2.0 | (c) 2014 Andrew Duthie <andrew@andrewduthie.com> | MIT License */
 ;(function($) {
 
     var plugin = 'optgrouper',

@@ -50,6 +50,6 @@ $('#selAnimals').optgrouper({
 
 ## License
 
-Copyright (c) 2013 Andrew Duthie
+Copyright (c) 2014 Andrew Duthie
 
 Released under the MIT License (see LICENSE.txt)
